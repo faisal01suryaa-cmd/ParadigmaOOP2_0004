@@ -28,3 +28,21 @@ public:
         cout << "pelajar dibuat dengan umur " << umur << endl;
     }
 };
+
+class budi : public pekerja, public pelajar {
+public:
+
+    budi(int pUmur) :
+        orang(pUmur),
+        pekerja(pUmur),
+        pelajar(pUmur) // hal ini dapat dilakukan jika menggunakan virtual
+    {
+        cout << "budi dibuat dengan umur " << umur << endl;
+    }
+};
+
+int main() {
+    budi a(20);
+    
+    return 0;
+}
